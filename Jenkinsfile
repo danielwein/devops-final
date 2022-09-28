@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-            	sh "cd webServer && docker build -t hit-web-server:latest ."
-                sh "cd webServer && docker build -t automation-qa:latest ."
+            	sh "cd webServer && docker build -t hit-web-server:latest ./"
+                sh "cd webServer && docker build -t automation-qa:latest ./"
             }
         }
         stage("Test") {
