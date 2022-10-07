@@ -19,7 +19,7 @@ public class webApplicationTests {
         System.setProperty("webdriver.chrome.whitelistedIps", "");
         ChromeDriver driver = new ChromeDriver(options);
         RestAssured.baseURI = "http://localhost";
-        RestAssured.port = 800;
+        RestAssured.port = 8000;
 
         RequestSpecification HTTPRequest = RestAssured.given();
         Response res = HTTPRequest.get();
