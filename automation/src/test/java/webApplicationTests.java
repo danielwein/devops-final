@@ -24,11 +24,11 @@ public class webApplicationTests {
     @Test
     public void testWebApplicationTitle() {
         ChromeOptions options = new ChromeOptions();
-        // options.addArguments("--headless");
-        // options.addArguments("--disable-dev-shm-usage"); 
-        // options.addArguments("--no-sandbox"); 
-        // options.addArguments("--whitelisted-ips=\"\"");
-        // System.setProperty("webdriver.chrome.whitelistedIps", "");
+        options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage"); 
+        options.addArguments("--no-sandbox"); 
+        options.addArguments("--whitelisted-ips=\"\"");
+        System.setProperty("webdriver.chrome.whitelistedIps", "");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://localhost:8000");
         String obtainedTitle = driver.getTitle();
@@ -39,11 +39,11 @@ public class webApplicationTests {
     @Test
     public void testSiteUI() {
         ChromeOptions options = new ChromeOptions();
-        // options.addArguments("--headless");
-        // options.addArguments("--disable-dev-shm-usage"); 
-        // options.addArguments("--no-sandbox"); 
-        // options.addArguments("--whitelisted-ips=\"\"");
-        // System.setProperty("webdriver.chrome.whitelistedIps", "");
+        options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage"); 
+        options.addArguments("--no-sandbox"); 
+        options.addArguments("--whitelisted-ips=\"\"");
+        System.setProperty("webdriver.chrome.whitelistedIps", "");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://localhost:8000");
         String obtainedName = driver.findElement(By.xpath("/html/body/h2[3]")).getText();
